@@ -5,6 +5,14 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuari.TodoApp.Core", "Kuari.TodoApp.Core\Kuari.TodoApp.Core.csproj", "{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuari.TodoApp.Repository", "Kuari.TodoApp.Repository\Kuari.TodoApp.Repository.csproj", "{2145AF4C-C790-404C-ACEB-25A347C83C88}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuari.TodoApp.Service", "Kuari.TodoApp.Service\Kuari.TodoApp.Service.csproj", "{B99A4DBB-031D-4727-BF3C-8D1B52EDAE27}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuari.TodoApp.SharedLibrary", "Kuari.TodoApp.SharedLibrary\Kuari.TodoApp.SharedLibrary.csproj", "{9BD8AA67-0529-4886-A3AB-D9B09B79318E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuari.TodoApp.WebAPI", "Kuari.TodoApp.WebAPI\Kuari.TodoApp.WebAPI.csproj", "{771CF9B1-7BBF-4B4B-8EAB-0A9C01041F54}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +23,22 @@ Global
 		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2145AF4C-C790-404C-ACEB-25A347C83C88}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2145AF4C-C790-404C-ACEB-25A347C83C88}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2145AF4C-C790-404C-ACEB-25A347C83C88}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2145AF4C-C790-404C-ACEB-25A347C83C88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99A4DBB-031D-4727-BF3C-8D1B52EDAE27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99A4DBB-031D-4727-BF3C-8D1B52EDAE27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99A4DBB-031D-4727-BF3C-8D1B52EDAE27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99A4DBB-031D-4727-BF3C-8D1B52EDAE27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9BD8AA67-0529-4886-A3AB-D9B09B79318E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BD8AA67-0529-4886-A3AB-D9B09B79318E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BD8AA67-0529-4886-A3AB-D9B09B79318E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BD8AA67-0529-4886-A3AB-D9B09B79318E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{771CF9B1-7BBF-4B4B-8EAB-0A9C01041F54}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{771CF9B1-7BBF-4B4B-8EAB-0A9C01041F54}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{771CF9B1-7BBF-4B4B-8EAB-0A9C01041F54}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{771CF9B1-7BBF-4B4B-8EAB-0A9C01041F54}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
