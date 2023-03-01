@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Kuari.TodoApp.Repository\Kuari.TodoApp.Repository.csproj" />
+  </ItemGroup>
+
 </Project>
