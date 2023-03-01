@@ -10,4 +10,12 @@
     <ProjectReference Include="..\Kuari.TodoApp.Core\Kuari.TodoApp.Core.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contexts\" />
+    <Folder Include="Configurations\" />
+    <Folder Include="Seeds\" />
+    <Folder Include="UnitOfWork\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>

@@ -10,4 +10,12 @@
     <ProjectReference Include="..\Kuari.TodoApp.SharedLibrary\Kuari.TodoApp.SharedLibrary.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DTOs\" />
+    <Folder Include="Entities\" />
+    <Folder Include="UnitOfWork\" />
+    <Folder Include="Repositories\" />
+    <Folder Include="Services\" />
+  </ItemGroup>
+
 </Project>
