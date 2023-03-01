@@ -1,3 +1,7 @@
+using Kuari.TodoApp.Repository.Contexts;
+using Microsoft.EntityFrameworkCore;
+using System.Reflection;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -7,6 +11,14 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+
+builder.Services.AddDbContext<TodoAppDbContext>(opt =>
+{
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("SqlConnection"), options =>
+    {
+        options.MigrationsAssembly(Assembly.GetAssembly(typeof(TodoAppDbContext)).GetName().Name);
+    });
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

@@ -11,11 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Contexts\" />
     <Folder Include="Configurations\" />
     <Folder Include="Seeds\" />
     <Folder Include="UnitOfWork\" />
-    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
   <ItemGroup>
