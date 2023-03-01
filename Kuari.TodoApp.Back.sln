@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kuari.TodoApp.Core", "Kuari.TodoApp.Core\Kuari.TodoApp.Core.csproj", "{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09A3BE8A-E94B-4DE4-B961-40BF4BD7B04A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {14865453-BF84-4727-AB82-15D1A1E74C68}
+	EndGlobalSection
+EndGlobal
