@@ -10,6 +10,6 @@ namespace Kuari.TodoApp.Core.DTOs
     {
         public string Content { get; set; }
         public bool IsCompleted { get; set; }
-        public DateTime CreatedDate { get; set; }
+       
     }
 }
