@@ -17,7 +17,7 @@ namespace Kuari.TodoApp.Repository.Configurations
             builder.Property(x => x.Id).UseIdentityColumn();
             builder.Property(x => x.IsCompleted).IsRequired();
             builder.Property(x => x.Content).IsRequired().HasMaxLength(100);
-            builder.Property(x => x.CreatedDate).IsRequired();
+            builder.Property(x => x.CreatedDate).IsRequired().HasDefaultValueSql("getdate()");
 
         }
     }
