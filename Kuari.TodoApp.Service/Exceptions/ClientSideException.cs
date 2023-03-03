@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Kuari.TodoApp.Service.Exceptions
 {
-    public class ClassSideException : Exception
+    public class ClientSideException : Exception
     {
-        public ClassSideException(string errorMessage) : base(errorMessage)
+        public ClientSideException(string errorMessage) : base(errorMessage)
         {
 
         }

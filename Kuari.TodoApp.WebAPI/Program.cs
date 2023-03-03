@@ -7,6 +7,8 @@ using Kuari.TodoApp.Repository.Repositories;
 using Kuari.TodoApp.Repository.UnitOfWork;
 using Kuari.TodoApp.Service.Services;
 using Kuari.TodoApp.Service.Validations;
+using Kuari.TodoApp.WebAPI.Filters;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -15,12 +17,19 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 // FluentValidation
-builder.Services.AddControllers().AddFluentValidation(x =>
+builder.Services.AddControllers(x =>
+{
+    x.Filters.Add(new ValidateFilterAttribute());
+}).AddFluentValidation(x =>
 {
     x.RegisterValidatorsFromAssemblyContaining<TodoCreateDtoValidator>();
 });
 
 
+builder.Services.Configure<ApiBehaviorOptions>(opt =>
+{
+    opt.SuppressModelStateInvalidFilter = true;
+});
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
