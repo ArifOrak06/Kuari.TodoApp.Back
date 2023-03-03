@@ -9,10 +9,10 @@ namespace Kuari.TodoApp.SharedLibrary.ResponseDTOs
 {
     public class CustomResponseDto<T> where T : class
     {
-        public T Data { get; set; }
+        public T Data { get; private set; }
         [JsonIgnore]
-        public int StatusCode { get; set; }
-        public List<String> Errors { get; set; }
+        public int StatusCode { get; private set; }
+        public List<String> Errors { get; private set; }
 
         public static CustomResponseDto<T> Success(int statusCode, T data)
         {

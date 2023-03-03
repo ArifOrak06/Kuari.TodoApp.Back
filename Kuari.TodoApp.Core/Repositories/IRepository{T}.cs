@@ -10,7 +10,7 @@ namespace Kuari.TodoApp.Core.Repositories
     public interface IRepository<T> where T : class
     {
         Task<IEnumerable<T>> GetAllAsync();
-        IQueryable<T> GetByFilterAsync(Expression<Func<T,bool>> filter);
+        IQueryable<T> GetByFilter(Expression<Func<T,bool>> filter);
         Task<T> GetByIdAsync(int id);
         void Update(T entity);
         void Delete(T entity);

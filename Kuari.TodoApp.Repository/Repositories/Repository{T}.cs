@@ -42,7 +42,7 @@ namespace Kuari.TodoApp.Repository.Repositories
             return await _dbSet.ToListAsync();
         }
 
-        public IQueryable<T> GetByFilterAsync(Expression<Func<T, bool>> filter)
+        public IQueryable<T> GetByFilter(Expression<Func<T, bool>> filter)
         {
             return _dbSet.Where(filter);
         }
