@@ -8,6 +8,7 @@ using Kuari.TodoApp.Repository.UnitOfWork;
 using Kuari.TodoApp.Service.Services;
 using Kuari.TodoApp.Service.Validations;
 using Kuari.TodoApp.WebAPI.Filters;
+using Kuari.TodoApp.WebAPI.Middlewares;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
@@ -16,6 +17,14 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
+
+builder.Services.AddCors(opt =>
+{
+    opt.AddDefaultPolicy(options =>
+    {
+        options.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
+    });
+});
 // FluentValidation
 builder.Services.AddControllers(x =>
 {
@@ -30,9 +39,9 @@ builder.Services.Configure<ApiBehaviorOptions>(opt =>
 {
     opt.SuppressModelStateInvalidFilter = true;
 });
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
+
+
 
 
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
@@ -46,6 +55,12 @@ builder.Services.AddDbContext<TodoAppDbContext>(opt =>
         options.MigrationsAssembly(Assembly.GetAssembly(typeof(TodoAppDbContext)).GetName().Name);
     });
 });
+
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -55,7 +70,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+app.UseCors();
 app.UseHttpsRedirection();
+app.UseCustomException();
 
 app.UseAuthorization();
 

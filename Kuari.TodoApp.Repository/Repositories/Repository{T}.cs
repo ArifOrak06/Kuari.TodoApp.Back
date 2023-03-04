@@ -58,7 +58,7 @@ namespace Kuari.TodoApp.Repository.Repositories
             return data;
         }
 
-        public async void Update(T entity)
+        public void Update(T entity)
         {
             _dbSet.Update(entity);
         }
